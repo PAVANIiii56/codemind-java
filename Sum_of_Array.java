@@ -4,7 +4,7 @@ class Sample
     public static void main(String pavs[])
     {
         Scanner sc=new Scanner(System.in);
-     int n,i,sum=0;
+     int n,i,sum_e=0;
      n=sc.nextInt();
      int a[]=new int[n];
     for(i=0;i<n;i++)
@@ -15,10 +15,10 @@ class Sample
      {
         
          {
-             sum=sum+a[i];
+             sum_e=sum_e+a[i];
          }
      }
-  System.out.println(sum);
+  System.out.println(sum_e);
 
      
    
