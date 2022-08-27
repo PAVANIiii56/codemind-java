@@ -1,22 +1,22 @@
 import java.util.Scanner;
-class Count
+class Sample
 {
-    public static void main(String args[])
+    public static void main(String pavs[])
     {
-        Scanner sc=new Scanner (System.in);
-        int n,x[],i,k,count=0;
+        Scanner sc=new Scanner(System.in);
+        int n,a[],i,k,count=0;
         n=sc.nextInt();
         k=sc.nextInt();
-        x=new int[n];
+         a=new int[n];
         for(i=0;i<n;i++)
         {
-            x[i]=sc.nextInt();
+           a[i]=sc.nextInt(); 
         }
-        for(i=0;i<n;i++)
-        {
-            if(x[i]%k==0)
+         for(i=0;i<n;i++)
+         {
+            if(a[i]%k==0) 
             count++;
-        }
-        System.out.println(count);
+         }
+         System.out.println(count);
     }
 }
