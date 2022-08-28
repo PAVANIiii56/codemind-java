@@ -1,39 +1,33 @@
 import java.util.Scanner;
-class Count
+class Sample
 {
-    public static boolean ispalindrome(int n)
+    public static int reverse(int num)
     {
-        int temp=n;
-        int r,sum=0;
-        while(n>0)
+        int r,rev=0;
+        while(num>0)
         {
-          r=n%10;
-          sum=sum*10+r;
-          n=n/10;
+            r=num%10;
+            rev=rev*10+r;
+            num=num/10;
         }
-        if(temp==sum)
-        {
-        return true;
-        }
-        else
-        {
-        return false;
-        }
+        return rev;
     }
-public static void main(String args[])
-{
-    Scanner sc=new Scanner(System.in);
-    int n,x[],count=0;
-    n=sc.nextInt();
-    x=new int[n];
-    for(int i=0;i<n;i++)
-    x[i]=sc.nextInt();
-    for(int i=0;i<n;i++)
+    public static void main(String pavs[])
     {
-   if(Count.ispalindrome(x[i]))
-   count++;
+        Scanner sc=new Scanner(System.in);
+        int n,i,a[],c=0;
+        n=sc.nextInt();
+        a=new int[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            if(a[i]==Sample.reverse(a[i]))
+            c++;
+        }
+        System.out.println(c);
+        
     }
-    System.out.println(count);
-    sc.close();
-}   
 }
